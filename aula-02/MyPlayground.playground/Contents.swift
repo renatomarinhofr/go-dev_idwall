@@ -128,7 +128,7 @@ makeBuy { res, name in
 
 // exemplo de pilha com functions utilizando LIFO(Last-In First-Out)
 
-var names = ["Renato", "Maria", "João"]
+var names: [String] = ["Renato", "Maria", "João"]
 
 
 func addName(name: String) {
@@ -147,3 +147,33 @@ removeName()
 removeName()
 
 print(names)
+
+
+// exemplo de pilha utilizando class LIFO(Last-In First-Out)
+
+var items = [Int]()
+
+class Stack {
+
+    func push(item: Int) {
+        return items.append(item)
+    }
+
+    func pop() -> Int {
+        return items.removeLast()
+    }
+
+}
+
+var stack = Stack().self
+
+stack.push(item: 50)
+stack.push(item: 40)
+stack.push(item: 30)
+
+print(items)
+
+stack.pop()
+stack.pop()
+
+print(items)
